@@ -8,41 +8,33 @@ using namespace std;
 
 int main()
 {
-    int N;
-    cin  >> N;
+    int N, S;
+    cin  >> N >> S;
 
+    vector<int> pall(N);
 
-    vector<long long> lquid(N);
-
-    for(int i =0; i<N;i++)
+    for (int i=0; i< N; i++)
     {
-        cin >> lquid[i];
+        cin >> pall[i];
     }
 
-    sort(lquid.begin(), lquid.end());
 
-    int left = 0, right = N-1;
-    int result = 2e9;
-    int ans1, ans2;
+    int left = 0, right = 0, sum = 0;
+    int count = numeric_limits<int>::max();
 
-    while(left < right)
+    while(right < N)
     {
-        int sum = lquid[left] + lquid[right];
+        sum += pall[right++];
 
-        if(abs(sum) < result)
+        while (sum >= S)
         {
-            result = abs(sum);
-            ans1 = lquid[left];
-            ans2 = lquid[right];        
-        } else if(sum > 0)
-        {
-            right--;
-        } else {
-            left++;
+            count = min(count, right - left);
+            sum -= pall[left++];
         }
+
     }
 
-    cout << ans1 << " " << ans2 << '\n';
+    cout << 
 
     return 0;
 }
