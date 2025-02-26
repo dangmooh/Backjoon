@@ -34,7 +34,7 @@ int main()
 
     }
 
-    cout << 
+    cout << (count == numeric_limits<int>::max() ? 0 : count) << "\n";
 
     return 0;
 }
