@@ -4,12 +4,15 @@
 */
 #include <iostream>
 #include <vector>
-
+#include <string>
 
 using namespace std;
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    
     string s1, s2;
     cin >> s1 >> s2;
 
