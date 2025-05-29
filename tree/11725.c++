@@ -45,7 +45,7 @@ int main()
     }
 
     parent[1] = -1;
-    dfs(1);
+    bfs(1);
 
     for(int i=2; i<=N; i++)
     {
