@@ -119,7 +119,7 @@ int solution(const char* storage[], size_t storage_len, const char* requests[], 
     n = storage_len;
     m = strlen(storage[0]);
     memset(q_cnt, 0, sizeof(q_cnt));
-
+ 
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<m; j++)
