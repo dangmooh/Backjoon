@@ -17,7 +17,7 @@ int solution(int** info, size_t info_rows, size_t info_cols, int n, int m) {
     {
         memset(dp2, 0, sizeof(dp2));
         int da = info[i][0], db = info[i][1];
-        for (int a=0; a<n; i++)
+        for (int a=0; a<n; a++)
         {
             for (int b=0; b<m; b++)
             {
