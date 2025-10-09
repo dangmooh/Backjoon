@@ -13,6 +13,7 @@ struct Rabbit {
         : pid(_pid), x(1), y(1), cnt(0) {}
 };
 
+
 struct compare {
     bool operator()(Rabbit &a, Rabbit &b)
     {
