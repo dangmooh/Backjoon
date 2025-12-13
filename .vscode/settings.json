@@ -67,4 +67,13 @@
         "sstream": "cpp",
         "unordered_set": "cpp"
     }
+
+    ,"editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.parameterHints.enabled": false,
+
+    // Optional: disable common AI extensions' inline suggestions
+    "github.copilot.inlineSuggest.enable": false,
+    "github.copilot.enable": false
 }

@@ -48,13 +48,3 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\run_tests.ps1 -Exe .\dp\22
 
 ## 주의
 - `tests/`는 로컬 테스트용으로 `.gitignore`에 등록되어 있습니다. 원격에 업로드하지 마세요.
-
----
-
-필요하시면 이 README를 더 개인화(예: 본인 닉네임, 학습 진행표 자동화, PR 템플릿)해 드릴게요.
-# 2025.02.20
-## 안녕하세요.
-저의 첫번째 MD 파일입니다.
-
-깃 허브에 잘 올라갔나요? ㅎㅎ
-
