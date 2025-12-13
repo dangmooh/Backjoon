@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build essentials
+        run: sudo apt-get update && sudo apt-get install -y g++
+      - name: Build (Ubuntu)
+        run: |
+          g++ -O2 -std=c++17 dp/2293.c++ -o dp/2293
+      - name: Run tests (Ubuntu)
+        run: |
+          bash ./run_tests.sh -e ./dp/2293 -t ./tests
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install MSYS2 (mingw)
+        run: choco install mingw -y
+      - name: Build (Windows)
+        run: |
+          C:\\msys64\\mingw64\\bin\\g++ -O2 -std=c++17 dp/2293.c++ -o dp/2293.exe
+      - name: Run tests (Windows)
+        shell: powershell
+        run: |
+          pwsh .\run_tests.ps1 -Exe .\dp\2293.exe -TestsDir .\tests

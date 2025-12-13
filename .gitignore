@@ -1,1 +1,8 @@
-*.exe
+.exe
+.o
+.obj
+bin/
+build/
+.vscode/
+# Ignore test inputs/outputs used for local testing
+tests/
