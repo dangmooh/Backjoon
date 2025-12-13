@@ -53,7 +53,7 @@ int main()
             int rot = (i - board[cur.y][cur.x] + 4) % 4;
             int ncost = cur.cost + rot + 1;
 
-            if(ncost < dist[ny][nx])
+            if(ncost < dist[ny][ nx])
             {
                 dist[ny][nx] = ncost;
                 pq.push({nx, ny, ncost});
